@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>GCU Jobs Job Information</title>
+	<link rel="stylesheet" href="basicstyle.css">
+	<!--viewport used to scale screen-->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+	<header>
+		<h1>GCU Jobs</h1>
+		<h3>Job Search</h3>
+		<nav>
+			<ul>
+				<li><a href="index.html">Homepage</a> </li>
+				<li><a href="pay.html">Pay Calculator</a> </li>
+				<li><a href="jobinfo.html">Job Information</a> </li>
+				<li><a href="about.html">About Us</a> </li>
+			</ul>
+		</nav>
+	</header>
+	<br>
+	<form action="jobinfo.html" id="findjob"><!--small from to ask for the job to be searched-->
+		<label for="JobTitle">Job Title:</label><br>
+        <input type="text" id="JobTitle" name="JobTitle" size="30"><br><br>
+		<input type="submit" value="Submit Form">
+	</form>
+	
+	<script>
+	evt.preventDefault();<!--this code makes the event possible to be cancelled if it can-->
+	
+	let form = document.getElementById("findjob");<!--take in the form input-->
+	form.addEventListener("submit", jobsearch);
+	
+	function jobsearch(evt){
+	let job = "JobTitle"<!--assign jobtitle to variable-->
+	let basejob = "http://api.lmiforall.org.uk/soc/search";<!--assign the api query-->
+	let jobquery = basejob + job;<!--create the job query-->
+	
+	request.open("Job", jobquery);<!--open the request-->
+	request.send();<!--send the request-->
+	}
+	</script>
+	
+	<footer>
+		 Created by Craig Speirs. 2021
+	</footer>
+</body>
+
+</html>

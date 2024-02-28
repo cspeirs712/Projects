@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>GCU Jobs About Us</title>
+	<link rel="stylesheet" href="basicstyle.css">
+	<!--viewport used to scale screen-->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+	<header>
+		<h1>GCU Jobs</h1>
+		<h3>About Us</h3>
+		<nav>
+			<ul>
+				<li><a href="index.html">Homepage</a> </li>
+				<li><a href="pay.html">Pay Calculator</a> </li>
+				<li><a href="jobinfo.html">Job Information</a> </li>
+				<li><a href="about.html">About Us</a> </li>
+			</ul>
+		</nav>
+	</header>
+	<br>
+	<form action="about.html" onsubmit="confirmform()"><!--form to take input for the contact us section-->
+		<label for="fname">First name:</label><br>
+		<input type="text" id="fname" name="fname" size="20"><br><br>
+		<label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" size="20"><br><br>
+		<label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" size="50"><br><br>
+		<label>How did you hear about us?</label><br>
+        <input type="checkbox" id="option1" name="option1" value="Word of Mouth"><!--checkbox used to allow multiple options to be selected-->
+        <label for="option1"> Word of Mouth</label><br>
+        <input type="checkbox" id="option2" name="option2" value="Internet Search">
+        <label for="option2"> Internet Search</label><br>
+        <input type="checkbox" id="option3" name="option3" value="Advertisement">
+        <label for="option3"> Advertisement</label><br><br>
+		<label>Message:</label><br>
+        <input type="text" id="message" name="message" size="100"><br><br>
+		<input type="submit" value="Submit Form">
+    </form>
+	
+	<script>
+	function confirmform() {
+	alert("Form Submitted Sucessfully");<!--alert function to display that the input has been recieved-->
+	}
+	</script>
+	
+	<p>Website designed by Craig Speirs, Second year cyber security student at Glasgow Caledonian University.
+	
+	
+	<footer>
+		Created by Craig Speirs. 2021
+	</footer>
+</body>
+
+</html>

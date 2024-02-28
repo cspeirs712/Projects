@@ -1,0 +1,32 @@
+emp = list()
+print = ("Welcome to the student registration program.")
+while (True):
+    print = ("Please select one of the following options:"
+             "1. Student registration"
+             "2. Module selection and verification"
+             "3. Student account top-up"
+             "4. Shopping"
+             "5. Check Balance"
+             "6. Edit information"
+             "7. Reporting"
+             "Q. Quit")
+    menuoption = input("Select an option: ")
+
+    if menuoption == "Q" or menuoption == "q":
+        break
+    elif menuoption == "1":
+        break
+    elif menuoption == "2":
+        break
+    elif menuoption == "3":
+        break
+    elif menuoption == "4":
+        break
+    elif menuoption == "5":
+        break
+    elif menuoption == "6":
+        break
+    elif menuoption == "7":
+        break
+
+print(emp)

@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>GCU Jobs Payment Calcualtor</title>
+	<link rel="stylesheet" href="basicstyle.css">
+	<!--viewport used to scale screen-->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+	<header>
+		<h1>GCU Jobs</h1>
+		<h3>Pay Calculator</h3>
+		<nav>
+			<ul>
+				<li><a href="index.html">Homepage</a> </li>
+				<li><a href="pay.html">Pay Calculator</a> </li>
+				<li><a href="jobinfo.html">Job Information</a> </li>
+				<li><a href="about.html">About Us</a> </li>
+			</ul>
+		</nav>
+	</header>
+	
+	<p>Use the form below to input your pay and have it display hourly, weekly, monthly and yearly figures.</p>
+	<!--section to output results of the payment calculator-->
+	<section id="payResults">
+    <h3>Payment Data</h3>
+    <hr />
+    <p>Yearly Pay: £<span id="Yearly"></span></p>
+	<p>Monthly Pay: £<span id="Monthly"></span></p>
+	<p>Weekly Pay: £<span id="Weekly"></span></p>
+	<p>Hourly Pay: £<span id="Hourly"></span></p>
+    
+  </section>
+	<br>
+	<!--form created for the inputs for payment calculator-->
+	<form onsubmit="return results()">
+		<label for="wage">Wage:</label><br>
+		<input type="text" id="wage" name="wage" size="6"><br><br>
+		<label for="hrsworked">Hours Worked:</label><br>
+        <input type="text" id="hrsworked" name="hrsworked" size="5"><br><br>
+		<label>Time Period:</label><br>
+		<input type="radio" id="durationy" name="duration" value="yearly"><label>Yearly</label><br><!--radio buttons-->
+        <input type="radio" id="durationm" name="duration" value="monthly"><label>Monthly</label><br>
+        <input type="radio" id="durationw" name="duration" value="weekly"><label>Weekly</label><br>
+        <input type="radio" id="durationh" name="duration" value="hourly"><label>Hourly</label><br><br>
+		<input type="submit" value="Submit Form">
+    </form>
+	
+	<script>
+	var wage; <!--created variables for function-->
+	var hrsworked;
+	var duration;
+	
+	function results() {
+		wage=parseFloat(document.getElementById("wage").value);
+		hrsworked=parseFloat(document.getElementById("hrsworked").value);
+		var yearlypay;<!--create variables for all payment types-->
+		var monthlypay;
+		var weeklypay;
+		var hourlypay;
+	
+	if (duration == "yearly") {
+		yearlypay = wage;<!--taking in payment as a yearly value and calculating relevant values from there-->
+		monthlypay = parseFloat(wage/12);
+		weeklypay = parseFloat(wage/52);
+		hourlypay = parseFloat((wage / 52) / hrsworked);
+	
+} 	else if (duration == "monthly") {
+		yearlypay = parseFloat(wage * 12);<!--takes in payment as monthly value-->
+		monthlypay = wage;
+		weeklypay = parseFloat(wage*12/52);
+		hourlypay = parseFloat(wage*12/52/hrsworked);
+	
+} 	else if (duration == "weekly") {
+		yearlypay = parseFloat(wage * 52);<!--takes in payment as weekly value-->
+		monthlypay = parseFloat(wage*52/12);
+		weeklypay = wage;
+		hourlypay = parseFloat(wage/hrsworked);
+	
+}  	else if (duration == "hourly") {
+		yearlypay = parseFloat(wage * hrsworked * 52);<!--takes in payment as hourly value-->
+		monthlypay = parseFloat(wage * hrsworked * 52 /12);
+		weeklypay = parseFloat(wage * hrsworked);
+		hourlypay = wage;
+
+}
+
+	function displayResults(){
+	document.getElementById("payResults")<!--display results function-->
+	document.createTextNode(+yearlypay+)
+	document.createTextNode(+monthlypay+)
+	document.createTextNode(+weeklypay+)
+	document.createTextNode(+hourlypay+)
+	}
+
+	</script>
+
+
+	<footer>
+		 Created by Craig Speirs. 2021
+	</footer>
+</body>
+
+</html>

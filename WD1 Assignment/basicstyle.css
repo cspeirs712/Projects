@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+/* default styles for WD1 Coursework document */
+
+header {
+	width: 100%;
+	border: 1px solid #ADB6C4;
+	border-radius: 1px 1px 1px 1px;
+	background-color:#001B2E;
+}
+
+h1{
+	color:#ADB6C4;
+}
+
+h3{
+	color:#ADB6C4;
+}
+
+nav {
+	min-width: 1px;	
+	border: 1px solid #ADB6C4;
+}
+nav li {
+	display: inline-block;
+	padding: 1%;
+}
+nav li a {
+	text-decoration: none;
+	color:#ADB6C4;
+}
+
+img {
+  display: block;
+  text-align: right;
+}
+
+body{
+	background-color:#294C60;
+}
+
+p{
+	text-align: center;
+	color:#ADB6C4;
+}
+
+form{
+	border: 1px solid #ADB6C4;
+	border-radius: 1px 1px 1px 1px;
+	background-color:#001B2E;
+	color:#ADB6C4;
+	width: 60%;
+}
+
+label{
+	color: #ADB6C4;
+}
+
+footer{
+	color:#ADB6C4
+}
